@@ -2,8 +2,7 @@
 #define ICP_SINGLE_ITERATION_H
 #include <Eigen/Core>
 
-enum ICPMethod
-{
+enum ICPMethod {
   ICP_METHOD_POINT_TO_POINT = 0,
   ICP_METHOD_POINT_TO_PLANE = 1,
   NUM_ICP_METHODS = 2,
@@ -27,15 +26,10 @@ enum ICPMethod
 //     or ICP_METHOD_POINT_TO_PLANE
 // Outputs:
 //   R  3 by 3 rotation matrix
-//   t  3d translation vector 
-void icp_single_iteration(
-  const Eigen::MatrixXd & VX,
-  const Eigen::MatrixXi & FX,
-  const Eigen::MatrixXd & VY,
-  const Eigen::MatrixXi & FY,
-  const int num_samples,
-  const ICPMethod method,
-  Eigen::Matrix3d & R,
-  Eigen::RowVector3d & t);
+//   t  3d translation vector
+void icp_single_iteration(const Eigen::MatrixXd& VX, const Eigen::MatrixXi& FX,
+                          const Eigen::MatrixXd& VY, const Eigen::MatrixXi& FY,
+                          const int num_samples, const ICPMethod method,
+                          Eigen::Matrix3d& R, Eigen::RowVector3d& t);
 
 #endif

@@ -12,12 +12,9 @@
 //   P  #X by 3 set of target points
 // Outputs:
 //   R  3 by 3 rotation matrix
-//   t  3d translation vector 
-//   
-void point_to_point_rigid_matching(
-  const Eigen::MatrixXd & X,
-  const Eigen::MatrixXd & P,
-  Eigen::Matrix3d & R,
-  Eigen::RowVector3d & t);
+//   t  3d translation vector
+//
+void point_to_point_rigid_matching(const Eigen::MatrixXd& X,
+                                   const Eigen::MatrixXd& P, Eigen::Matrix3d& R,
+                                   Eigen::RowVector3d& t);
 #endif
-
